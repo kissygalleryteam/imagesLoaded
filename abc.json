@@ -1,0 +1,17 @@
+{
+    "name": "imagesLoaded",
+    "comName":"ImagesLoaded",
+    "version": "1.0",
+    "desc": "",
+    "tag":"image,load,照片,imagesLoaded",
+    "githubName":"xingqiba0418",
+    "author": {
+        "name": "秋知",
+        "email": "benfchen.cf@alibaba-inc.com",
+        "page": ""
+    },
+	"flexComboPort":"8081",
+	"reserveServerPort":"8080",
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
