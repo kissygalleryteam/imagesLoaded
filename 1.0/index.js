@@ -15,7 +15,7 @@ KISSY.add(function (S, Node,Base,Event) {
      * @param comConfig {Object}
      * @param comConfig.elem {String|HTMLElement|Node} 要监听图片下载进度的元素
      * @param [comConfig.options] {Object|Function} 当为Function时，则是图片列表完成时（无论失败或成功）的回调
-     * @param [comConfig.onAlways] {Function} 图片列表完成时（无论失败或成功）的回调
+     * @param [comConfig.complete] {Function} 图片列表完成时（无论失败或成功）的回调
      */
     function ImagesLoaded(comConfig) {
         var self = this;
@@ -38,13 +38,13 @@ KISSY.add(function (S, Node,Base,Event) {
      * @param comConfig {Object}
      * @param comConfig.elem {String|HTMLElement|Node} 要监听图片下载进度的元素
      * @param [comConfig.options] {Object|Function} 当为Function时，则是图片列表完成时（无论失败或成功）的回调
-     * @param [comConfig.onAlways] {Function} 图片列表完成时（无论失败或成功）的回调
+     * @param [comConfig.complete] {Function} 图片列表完成时（无论失败或成功）的回调
      */
         _init : function(comConfig){
             var self = this;
             var elem = comConfig.elem,
                 options = comConfig.options,
-                onAlways = comConfig.onAlways;
+                complete = comConfig.complete;
             self.checkedCount = 0;
             self.imagesCount = 0;
             self.hasAnyBroken = false;
@@ -54,12 +54,12 @@ KISSY.add(function (S, Node,Base,Event) {
             }
             self.elements = self._getElementsAsArray(elem);  //原生Element DOM数组
             if(typeof options === 'function'){
-                onAlways = options;
+                complete = options;
             }else{
                 self.options = options;
             }
-            if(onAlways){
-                self.on('always',onAlways);
+            if(complete){
+                self.on('complete',complete);
             }
 
             self._getImages();
@@ -151,14 +151,14 @@ KISSY.add(function (S, Node,Base,Event) {
             当图片列表中所有图片的状态都确定后，根据状态分别触发以下事件
             - fail 当图片列表中有至少一张图片是出错的
             - done 当图片列表中所有图片都成功下载
-            - always 无论成功与否都会触发此事件
+            - complete 无论成功与否都会触发此事件
         */
         _complete : function(){
             var eventName = this.hasAnyBroken ? 'fail' : 'done';
             this.isComplete = true;
             var self =this;
             self.fire(eventName, self);
-            self.fire('always',self);
+            self.fire('complete',self);
         }
     }, {ATTRS : /** @lends ImagesLoaded*/{
 

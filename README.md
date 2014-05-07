@@ -13,7 +13,7 @@ ImagesLoaded是一个能监听图片列表加载进度的组件。ImagesLoaded�
     S.use('gallery/imagesLoaded/1.0/index', function (S, ImagesLoaded) {
          var imagesLoaded = new ImagesLoaded({
             elem : container$,
-            onAlways : function(imagesLoadedInstance){
+            complete : function(imagesLoadedInstance){
 				//图片列表加载完成，无论是否有图片加载失败
 				//do something
             }
@@ -28,14 +28,14 @@ ImagesLoaded是一个能监听图片列表加载进度的组件。ImagesLoaded�
 
 *elem* {String|HTMLElement|KISSY.Node} 需要监听的图片列表或其祖先节点
 
-*options* {Object|Function} 可选。当为Object时表示‘自定义属性’，当为Function时，下面的'onAlways'配置则不需要，意义一样
+*options* {Object|Function} 可选。当为Object时表示‘自定义属性’，当为Function时，下面的'complete'配置则不需要，意义一样
 
-*onAlways* {Function} 可选。图片列表加载完成后的回调函数，无论其中是否有图片出错
+*complete* {Function} 可选。图片列表加载完成后的回调函数，无论其中是否有图片出错
 
 
 ### Events
 
-*always* 
+*complete* 
 图片列表加载完成后触发，无论其中是否有图片出错。带入参数为ImagesLoaded实例本身
 
 *fail* 
