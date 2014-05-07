@@ -51,10 +51,10 @@ ImagesLoaded是一个能监听图片列表加载进度的组件。ImagesLoaded�
 *images* {Object[]} 
 图片列表信息
 
-*images[i].img* 
+*images[i].img* {HTMLElement}
 图片列表中的某一个图片元素
 
-*images[i].isLoaded* 
+*images[i].isLoaded* {Boolean}
 图片列表中的某一个图片元素是否加载成功
 
 *imagesCount* {Number}
