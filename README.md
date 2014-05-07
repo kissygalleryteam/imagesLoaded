@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## 综述
 
 ImagesLoaded是一个能监听图片列表加载进度的组件。ImagesLoaded实例本身是一个事件监听器，可以在上面绑定一些事件来做相应的处理。
@@ -75,18 +75,3 @@ ImagesLoaded是一个能监听图片列表加载进度的组件。ImagesLoaded�
 ### V1.0
 
     [!]
-=======
-## imagesLoaded
-
-* 版本：1.0
-* 教程：[http://gallery.kissyui.com/imagesLoaded/1.0/guide/index.html](http://gallery.kissyui.com/imagesLoaded/1.0/guide/index.html)
-* demo：[http://gallery.kissyui.com/imagesLoaded/1.0/demo/index.html](http://gallery.kissyui.com/imagesLoaded/1.0/demo/index.html)
-
-## changelog
-
-### V1.0
-
-    [!]
-
-
->>>>>>> 14ee40caa00ec4ff8aafc0c0682e7853d0eef296
