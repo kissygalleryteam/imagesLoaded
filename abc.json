@@ -1,0 +1,18 @@
+{
+    "name": "imagesLoaded",
+    "comName":"ImagesLoaded",
+    "version": "1.0",
+    "desc": "图片列表加载进度组件",
+    "tag":"image,load,照片,imagesLoaded",
+    "githubName":"xingqiba0418",
+    "author": {
+        "name": "秋知",
+        "email": "benfchen.cf@alibaba-inc.com",
+        "page": "https://github.com/xingqiba0418"
+    },
+	"flexComboPort":"8081",
+	"reserveServerPort":"8080",
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide",
+    "cover" : "http://gtms03.alicdn.com/tps/i3/T18e6kFFlaXXbuvm_S-300-120.png"
+}
