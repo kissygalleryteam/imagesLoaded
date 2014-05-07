@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>ImagesLoaded的demo</title>
-    <script src="http://g.tbcdn.cn/kissy/k/1.4.1/seed-min.js" charset="utf-8"></script>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.1/seed-min.js" data-config="{debug : true}" charset="utf-8"></script>
     <style>
     #image-container img {
       max-height: 140px;
@@ -109,6 +109,7 @@
         $('#add').on('click',function(){
             // add new images
             var items = getItems();
+
             $container.prepend( $(items) );
             // use ImagesLoaded
             var imagesLoadedInstance = ImagesLoaded({
@@ -181,6 +182,7 @@
         $('#reset').on('click', function(){
             $container.empty();
         });
+
     });
 </script>
 </body>

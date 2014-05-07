@@ -65,3 +65,4 @@ ImagesLoaded是一个能监听图片列表加载进度的组件。ImagesLoaded�
 
 *hasAnyBroken* {Boolean}
 图片列表中是否有至少一张图片加载失败
+
