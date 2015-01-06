@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>imagesLoaded</title>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com-prettify.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.css">
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdn.staticfile.org/prettify/r298/prettify.min.js"></script>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.8/seed-min.js" data-config="{combine:true}"></script>
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div id="header"><a href="http://docs.kissyui.com/" class="logo">kissy</a>
+      <nav><a href="http://docs.kissyui.com/1.4/docs/html/coms.html">优秀组件推荐</a></nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 bs-docs-sidebar">
+          <ul data-spy="affix" data-offset-top="0" class="nav nav-list bs-docs-sidenav"></ul>
+        </div>
+        <div class="span9 bs-docs-content">
+          <h1 data-id="undefined" class="title">imagesLoaded</h1>
+          <p class="author-wrapper"><span>组件有问题？旺旺联系作者：</span><a href="https://github.com/xingqiba0418" target="_blank" data-name="秋知" class="author"><img src="https://avatars.githubusercontent.com/u/1918022?v=2&amp;s=60" alt="秋知"></a><span class="author-name">秋知</span>
+          </p>
+          <div class="common-link"><a href="../demo/index.html" target="_blank" class="demo">示例</a><a href="https://github.com/kissygalleryteam/imagesLoaded" target="_blank" class="source">源码</a></div>
+          <p class="com-info"><span class="info-label">View</span><span data-com="imagesLoaded" class="J_View">435</span></p>
+          <p class="com-info"><span class="info-label">kissy版本</span><span>1.4.X</span>
+          </p><h2 id="-">综述</h2>
+<p>ImagesLoaded是一个能监听图片列表加载进度的组件。ImagesLoaded实例本身是一个事件监听器，可以在上面绑定一些事件来做相应的处理。</p>
+<ul>
+<li>版本：2.0.0</li>
+<li>作者：秋知</li>
+<li>demo：<a href="http://kg.kissyui.com/imagesLoaded/2.0.0/demo/index.html">http://kg.kissyui.com/imagesLoaded/2.0.0/demo/index.html</a></li>
+</ul>
+<h2 id="-">初始化组件</h2>
+<pre><code>S.use(&#39;kg/imagesLoaded/2.0.0/index&#39;, function (S, ImagesLoaded) {
+     var imagesLoaded = new ImagesLoaded({
+        elem : container$,
+        complete : function(imagesLoadedInstance){
+            //图片列表加载完成，无论是否有图片加载失败
+            //do something
+        }
+     });
+})
+</code></pre><h2 id="api-">API说明</h2>
+<h3 id="configs">Configs</h3>
+<p><em>elem</em> {String|HTMLElement|KISSY.Node} 需要监听的图片列表或其祖先节点</p>
+<p><em>options</em> {Object|Function} 可选。当为Object时表示‘自定义属性’，当为Function时，下面的&#39;complete&#39;配置则不需要，意义一样</p>
+<p><em>complete</em> {Function} 可选。图片列表加载完成后的回调函数，无论其中是否有图片出错</p>
+<h3 id="events">Events</h3>
+<p><em>complete</em> 
+图片列表加载完成后触发，无论其中是否有图片出错。带入参数为ImagesLoaded实例本身</p>
+<p><em>fail</em> 
+图片列表加载完成后，当其中有至少一张图片出错则触发。带入参数为ImagesLoaded实例本身</p>
+<p><em>done</em> 
+图片列表加载完成后，并且没有一张图片出错则触发。带入参数为ImagesLoaded实例本身</p>
+<p><em>progress</em> 
+图片列表中每一张图片加载成功或失败都会触发一次progress事件
+    <code>imagesLoadedInstance.on(&#39;progress&#39;,onProgress);</code></p>
+<h3 id="properties">Properties</h3>
+<p><em>images</em> {Object[]} 
+图片列表信息</p>
+<p><em>images[i].img</em> {HTMLElement}
+图片列表中的某一个图片元素</p>
+<p><em>images[i].isLoaded</em> {Boolean}
+图片列表中的某一个图片元素是否加载成功</p>
+<p><em>imagesCount</em> {Number}
+监听的图片列表中的图片数量</p>
+<p><em>checkedCount</em> {Number}
+图片列表中已经确认状态的图片数量</p>
+<p><em>hasAnyBroken</em> {Boolean}
+图片列表中是否有至少一张图片加载失败</p>
+
+          <div style="display:none;"><script type="text/javascript" src="http://tajs.qq.com/stats?sId=36378479" charset="UTF-8"></script></div>
+          <script src="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
